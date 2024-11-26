@@ -1,0 +1,19 @@
+.search{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.search input{
+    border: 1px solid darkgrey;
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 8px;
+}
+
+input:hover,
+input:focus{
+    border-color: rgb(197, 180, 213);
+    outline: none;
+}
+
