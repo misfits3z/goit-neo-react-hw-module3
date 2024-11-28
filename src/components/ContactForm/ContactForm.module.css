@@ -4,7 +4,17 @@
     border: 1px solid darkgrey;
     border-radius: 8px;
     padding: 25px;
+    background-image: url('src/assets/images/depositphotos_654192190-stock-photo-summer-flat-lay-background-tropical.webp');
+    background-size: cover;
+    background-position: center; 
+    background-blend-mode: overlay;
+    background-color: rgba(250, 248, 249, 0.5);
+    margin-bottom: 20px;
+
 }
+
+
+  
 
 .label {
     
@@ -31,7 +41,7 @@
     
     margin-top: 20px;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     width: 120px;
     
