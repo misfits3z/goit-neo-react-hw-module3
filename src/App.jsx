@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
 
-  const [contacts, setContact] = useState([
+  const [contacts, setContacts] = useState([
     {id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
     {id: 'id-2', name: 'Hermione Kline', number: '443-89-12'},
     {id: 'id-3', name: 'Eden Clements', number: '645-17-79'},
@@ -16,6 +16,15 @@ function App() {
   ])
 
   const [filter, setFilter] = useState('');
+
+  const handleAddContact = (newContact) => {
+    setContacts((prevContacts) => [...prevContacts, newContact]);
+  };
+
+  const handleDeleteContact = (id) => {
+    setContacts((prevContacts) => prevContacts.filter((contact) => contact.id !== id));
+  };
+
 
   const handleFilterChange = (evt) => {
     setFilter(evt.target.value);
@@ -28,9 +37,9 @@ function App() {
   return (
     <div>
       <h1>Phonebook</h1>
-      <ContactForm />
+      <ContactForm onAddContact={handleAddContact} />
       <SearchBox type="text" value={filter} onChange={handleFilterChange}/>
-      <ContactList contacts={filteredContacts} />
+      <ContactList contacts={filteredContacts} onDeleteContact={handleDeleteContact} />
     </div>
   );
 }
