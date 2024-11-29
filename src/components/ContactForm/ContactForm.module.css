@@ -4,7 +4,7 @@
     border: 1px solid darkgrey;
     border-radius: 8px;
     padding: 25px;
-    background-image: url('src/assets/images/depositphotos_654192190-stock-photo-summer-flat-lay-background-tropical.webp');
+    background-image: url('public/images/depositphotos_654192190-stock-photo-summer-flat-lay-background-tropical.webp');
     background-size: cover;
     background-position: center; 
     background-blend-mode: overlay;
