@@ -9,9 +9,9 @@ export default function ContactForm({onAddContact}) {
       name: Yup.string()
         .min(3, "Too Short!")
         .max(50, "Too Long!")
-        .required("Required"),
+        .required("Name is required"),
       phone: Yup.string()
-        .matches(/^\+?[1-9]\d{6,14}$/, "Invalid phone number format")
+        .matches(/^\+?[1-9][0-9-\s]{6,14}$/, "Invalid phone number format")
         .required("Phone number is required"),
     });
   
